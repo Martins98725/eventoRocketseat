@@ -1,5 +1,6 @@
 package br.icaromartins.todolisticaro.user;
 
+import at.favre.lib.crypto.bcrypt.BCrypt;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -20,6 +21,8 @@ public class UserController {
              return  ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Usuario ja existe");
 
             }
+            var passowordHasherd = BCrypt.withDefaults().hashToString(12, userModel.getPassoword().toCharArray());
+            userModel.setPassoword(passowordHasherd);
             var userCreatead = this.repository.save(userModel);
             return ResponseEntity.status(HttpStatus.CREATED).body(userCreatead);
     }

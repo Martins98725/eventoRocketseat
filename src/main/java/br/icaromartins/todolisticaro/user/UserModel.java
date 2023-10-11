@@ -20,7 +20,8 @@ public class UserModel {
     private String userName;
     @Column(name = "nome", nullable = false, length = 40)
     private String name;
-    @Column(name = "senha", nullable = false, length = 15)
+    @Column(name = "senha", nullable = false)
+
     private String passoword;
 
     @CreationTimestamp
