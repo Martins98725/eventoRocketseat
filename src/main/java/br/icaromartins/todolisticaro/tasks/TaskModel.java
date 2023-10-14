@@ -1,4 +1,4 @@
-package br.icaromartins.todolisticaro.user.tasks;
+package br.icaromartins.todolisticaro.tasks;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

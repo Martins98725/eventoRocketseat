@@ -1,4 +1,4 @@
-package br.icaromartins.todolisticaro.user.filter;
+package br.icaromartins.todolisticaro.filter;
 
 import at.favre.lib.crypto.bcrypt.BCrypt;
 import br.icaromartins.todolisticaro.user.IUserRepository;
@@ -22,7 +22,7 @@ public class FilterTaskAuth extends OncePerRequestFilter {
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
         var servletPath = request.getServletPath();
-        if (servletPath.equals("/tasks/")){
+        if (servletPath.startsWith("/tasks/")){
             var auth = request.getHeader("Authorization");
             //processo de decode
 
