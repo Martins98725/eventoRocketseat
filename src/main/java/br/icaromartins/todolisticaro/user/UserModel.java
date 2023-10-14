@@ -24,7 +24,7 @@ public class UserModel {
     private String name;
 
     @Column(name = "senha", nullable = false)
-    private String passoword;
+    private String password;
 
     @CreationTimestamp
     private LocalDateTime createadAt;
