@@ -13,8 +13,8 @@ import java.util.Collection;
 import java.util.List;
 import java.util.UUID;
 
-@Table(name = "users")
-@Entity(name = "tb_entity")
+@Table(name = "tb_users")
+@Entity(name = "users")
 @Data
 public class UserModel implements UserDetails {
     @Id
@@ -36,6 +36,12 @@ public class UserModel implements UserDetails {
 
     @CreationTimestamp
     private LocalDateTime createadAt;
+
+    public UserModel(String login, String password, UserRoles role){
+        this.login = login;
+        this.password = password;
+        this.role = role;
+    }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

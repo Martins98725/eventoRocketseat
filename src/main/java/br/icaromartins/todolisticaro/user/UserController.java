@@ -1,6 +1,7 @@
 package br.icaromartins.todolisticaro.user;
 
 import at.favre.lib.crypto.bcrypt.BCrypt;
+import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -25,9 +26,8 @@ public class UserController {
             return ResponseEntity.status(HttpStatus.CREATED).body(userCreatead);
     }
     @GetMapping("/user")
-    public List<UserModel> findAll(){
-        return this.repository.findAll();
+    public ResponseEntity findAll(){
+        List<UserModel> users = this.repository.findAll();
+        return ResponseEntity.status(HttpStatus.OK).body(users);
     }
-    //commit
-
 }

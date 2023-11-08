@@ -1,3 +1,4 @@
+/*
 package br.icaromartins.todolisticaro.services;
 
 import br.icaromartins.todolisticaro.user.SRepositoryUser;
@@ -17,3 +18,4 @@ public class AuthorizationService implements UserDetailsService {
         return repository.findByLogin(username);
     }
 }
+*/

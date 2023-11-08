@@ -1,3 +1,4 @@
+/*
 package br.icaromartins.todolisticaro.filter;
 
 import at.favre.lib.crypto.bcrypt.BCrypt;
@@ -12,8 +13,10 @@ import org.springframework.web.filter.OncePerRequestFilter;
 import java.io.IOException;
 import java.util.Base64;
 
+*/
 /* toda requisição passa pelo filter primeiro.
-* */
+* *//*
+
 @Component
 public class FilterTaskAuth extends OncePerRequestFilter {
 
@@ -59,3 +62,4 @@ public class FilterTaskAuth extends OncePerRequestFilter {
         }
     }
 }
+*/
