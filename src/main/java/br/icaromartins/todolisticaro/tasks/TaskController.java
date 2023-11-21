@@ -13,7 +13,7 @@ import java.util.UUID;
 
 @RestController
 @RequestMapping("/tasks")
-public class TaksController {
+public class TaskController {
     @Autowired
     private ITaskRepository repository;
     @PostMapping("/")
