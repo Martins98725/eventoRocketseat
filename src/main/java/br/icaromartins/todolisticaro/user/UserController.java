@@ -12,7 +12,7 @@ import java.util.List;
 @RequestMapping("/users")
 public class UserController {
     @Autowired
-  private IUserRepository repository;
+  private SRepositoryUser repository;
     @PostMapping("/")
     public ResponseEntity create(@RequestBody UserModel userModel){
             var user = this.repository.findByUserName(userModel.getUsername());

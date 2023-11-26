@@ -1,8 +1,8 @@
-/*
+
 package br.icaromartins.todolisticaro.filter;
 
 import at.favre.lib.crypto.bcrypt.BCrypt;
-import br.icaromartins.todolisticaro.user.IUserRepository;
+import br.icaromartins.todolisticaro.user.SRepositoryUser;
 import jakarta.servlet.*;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -13,15 +13,15 @@ import org.springframework.web.filter.OncePerRequestFilter;
 import java.io.IOException;
 import java.util.Base64;
 
-*/
+
 /* toda requisição passa pelo filter primeiro.
-* *//*
+* */
 
 @Component
 public class FilterTaskAuth extends OncePerRequestFilter {
 
     @Autowired
-    private IUserRepository repository;
+    private SRepositoryUser repository;
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
         var servletPath = request.getServletPath();
@@ -62,4 +62,3 @@ public class FilterTaskAuth extends OncePerRequestFilter {
         }
     }
 }
-*/
